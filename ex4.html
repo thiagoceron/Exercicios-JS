@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Média Vetor</title>
+</head>
+
+<body>
+    <form id="Media">
+        <h2>Vetor: [2, 4, 6, 8]</h2>
+
+        <button type="button" onclick="mediaVetor()">Calcular a Média</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        function mediaVetor() {
+            var media = [2, 4, 6, 8];
+            var valor = 0;
+
+            for (var i = 0; i < media.length; i++) {
+                valor += media[i];
+            }
+
+            var mediaFinal = valor / media.length;
+
+            document.getElementById('resultado').textContent = "A média é: " + mediaFinal;
+            alert("Média do vetor é: " + mediaFinal);
+        }
+    </script>
+</body>
+
+</html>

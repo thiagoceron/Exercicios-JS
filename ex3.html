@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Notas</title>
+</head>
+
+<body>
+    <form id="notas">
+        <label for="nota">Nota:</label>
+        <input type="number" id="nota" name="nota"><br><br>
+
+        <button type="button" onclick="verificarNotas()">Verificar</button>
+    </form>
+
+    <script>
+        function verificarNotas() {
+            const nota = parseFloat(document.getElementById("nota").value);
+
+            if (nota < 6) {
+                alert("Reprovado: " + nota);
+            } else if (nota >= 6 && nota < 8) {
+                alert("Aprovado: " + nota);
+            } else {
+                alert("Aprovado com louvor: " + nota);
+            }
+        }
+    </script>
+</body>
+
+</html>

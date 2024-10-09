@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Verificar Letras</title>
+</head>
+
+<body>
+    <form id="variaveis">
+
+        <h2>Digite uma letra:</h2>
+
+        <label for="letra">Letra:</label>
+        <input type="text" id="letra" name="letra"><br><br>
+
+        <button type="button" onclick="verificarLetra()">Verificar:</button>
+    </form>
+
+    <script>
+        function verificarLetra() {
+            const letra = document.getElementById("letra").value;
+
+            if (letra == 'a' || letra == 'A') {
+                alert("Letra A");
+            } else if (letra == 'b' || letra == 'B') {
+                alert("Letra B ");
+            } else {
+                alert("Digite outra letra! ");
+            }
+        }
+    </script>
+</body>
+
+</html>

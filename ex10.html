@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Média de uma Matriz</title>
+</head>
+
+<body>
+    <form id="Media">
+        <h2>Matriz: [[2, 4], [6, 8]]</h2>
+
+        <button type="button" onclick="mediaMatriz()">Calcular a Média</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        function mediaMatriz() {
+            var matriz = [[2, 4], [6, 8]];
+            var valor = 0;
+            var totalVariaveis = matriz.length * matriz[0].length;
+
+            for (var i = 0; i < matriz.length; i++) {
+                for (var j = 0; j < matriz[i].length; j++) {
+                    valor += matriz[i][j];
+                }
+            }
+
+            var medMatriz = valor / totalVariaveis;
+
+            document.getElementById('resultado').textContent = "A média da matriz é: " + medMatriz;
+            alert("A média da Matriz é: " + medMatriz);
+        }
+    </script>
+</body>
+
+</html>

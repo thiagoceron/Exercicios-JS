@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Opções</title>
+</head>
+
+<body>
+    <form id="Opcoes">
+        <h2>Menu de opções:</h2>
+        <h2>1. Opção 1</h2>
+        <h2>2. Opção 2</h2>
+        <h2>3. Opção 3</h2><br><br>
+
+        <label for="opcoes">Número:</label>
+        <input type="number" id="opcoes" name="opcoes"><br><br>
+
+        <button type="button" onclick="escolheOpcoes()">Digite a sua Opção</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        function escolheOpcoes() {
+            let opcao = parseInt(document.getElementById("opcoes").value);
+
+            let resultado = document.getElementById("resultado");
+            switch (opcao) {
+                case 1:
+                    resultado.textContent = "Opção 1 escolhida.";
+                    alert("Opção 1 escolhida!");
+                    break;
+                case 2:
+                    resultado.textContent = "Opção 2 escolhida.";
+                    alert("Opção 2 escolhida!");
+                    break;
+                case 3:
+                    resultado.textContent = "Opção 3 escolhida.";
+                    alert("Opção 3 escolhida!");
+                    break;
+                default:
+                    resultado.textContent = "Opção Inválida!";
+                    alert("Opção Inválida!");
+            }
+        }
+    </script>
+</body>
+
+</html>

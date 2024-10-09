@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maior valor de um Vetor</title>
+</head>
+
+<body>
+    <form id="Maior">
+        <h2>Vetor: [10, 5, 2, 19]</h2>
+
+        <button type="button" onclick="maiorValor()">Verificar maior valor:</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        function maiorValor() {
+            var vetor = [10, 5, 2, 19];
+            var valor = vetor[0];
+
+            for (var i = 1; i < vetor.length; i++) {
+                if (vetor[i] > valor) {
+                    valor = vetor[i];
+                }
+            }
+
+            document.getElementById('resultado').textContent = "O maior valor do vetor é: " + valor;
+            alert("O maior valor do vetor é: " + valor);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Soma de uma Matriz</title>
+</head>
+
+<body>
+    <form id="Soma">
+        <h2>Matriz: [[3, 6], [10, 14]]</h2>
+
+        <button type="button" onclick="somaMatriz()">Calcular a Soma:</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        function somaMatriz() {
+            var matriz = [[3, 6], [10, 14]];
+            var valor = 0;
+
+            for (var i = 0; i < matriz.length; i++) {
+                for(var j = 0; j < matriz[i].length; j++){
+                    valor += matriz[i][j];
+                }
+            }
+
+            var somaMatriz = valor;
+
+            document.getElementById('resultado').textContent = "A soma da matriz é: " + somaMatriz;
+            alert("Soma da Matriz é: " + somaMatriz);
+        }
+    </script>
+</body>
+
+</html>
